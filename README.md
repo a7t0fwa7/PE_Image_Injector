@@ -8,7 +8,7 @@
 
 将当前进程的 PE Image (Sections) 注入到其他进程运行，实现进程迁移。
 
-Inject the PE Image (Sections) of the current process into other processes to achieve process migration.
+Inject the PE Image (Sections) of the current process into other processes to achieve process injection.
 
 项目: https://github.com/HackerCalico/PE_Image_Injector
 
