@@ -77,7 +77,7 @@ int main() {
     // 申请注入空间
     PVOID pSections = VirtualAllocEx(hProcess, NULL, sizeOfSections + importDllNamesLength, MEM_COMMIT, PAGE_READWRITE);
 
-    // 地址重定位 (根据“注入空间”基址对 Sections 重定位)
+    // 地址重定位 (根据 注入空间 基址对 Sections 重定位)
     PIMAGE_BASE_RELOCATION pRelocDir = (PIMAGE_BASE_RELOCATION)((DWORD_PTR)pInjectSections - sizeOfHeaders + relocDirRVA);
     while (pRelocDir->SizeOfBlock) {
         PWORD pOffset = (PWORD)((DWORD_PTR)pRelocDir + sizeof(IMAGE_BASE_RELOCATION));
